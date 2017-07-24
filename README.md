@@ -2,7 +2,7 @@
 EmacsEssay
 ==========
 
-[![Travis-CI Build Status](https:/travis-ci.org/dakni/emacsessay/.svg?branch=master)](https:/travis-ci.org/dakni/emacsessay/)
+[![Travis-CI Build Status](https://travis-ci.org/dakni/emacsessay/.svg?branch=master)](https://travis-ci.org/dakni/emacsessay)
 
 The goal of EmacsEssay is to illustrate the use of the `rrtools` package in an emacs environment
 
