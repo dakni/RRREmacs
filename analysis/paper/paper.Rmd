@@ -115,7 +115,7 @@ Since we want to push our changes to github we need an interface to git. This is
 
 After this type `C-x g` in any of your reproducible research documents to interact with git.
 
-## Further add-ons
+## Further conveniences
 
 Of course you will write many papers. Hence, project management might be desirable. [projectile](http://projectile.readthedocs.io/en/latest/) might be what you are looking for. 
 
