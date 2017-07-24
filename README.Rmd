@@ -18,17 +18,17 @@ knitr::opts_chunk$set(
 
 [![Travis-CI Build Status](https://travis-ci.org//.svg?branch=master)](https://travis-ci.org//)
 
-The goal of EmacsEssay is to ...
+The goal of EmacsEssay is to illustrate the use of the rrtools package in an emacs environment
 
 ### Citation
 
 Please cite this compendium as:
 
-> Authors, (`r format(Sys.Date(), "%Y")`). _Title of compendium_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
+> Knitter, Daniel, (`r format(Sys.Date(), "%Y")`). _Emacs, rrtools, and reproducible research_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at https://github.com/dakni/EmacsEssay
 
 ### Licenses
 
-**Text and figures:**  [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
+**Text and figures:** [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/); If figures are created by other people these figures are linked to their source location. 
 
 **Code:** See the [DESCRIPTION](DESCRIPTION) file
 

@@ -32,6 +32,8 @@ knitr::opts_chunk$set(
 
 # Introduction
 
+![](../data/rrtools_in_Emacs.png)
+
 Although RStudio is one of the most popular GUIs for R, offering a lot of convenient features, there are still many users using a different setup to work with R, develop their packages, write their papers, etc. 
 
 Here I want to show the ease of using Emacs and some of its add-on package as a all-in-one working environment solution for reproducible research using R. In order to use R within Emacs one has to install the ESS, i.e. emacs speaks statistics, add-on. But, is it worthwhile to use it instead of RStudio? Here is the answer of Hadley Wickham: "The only real competitor [to RStudio] is [ESS, emacs speaks statistics](http://ess.r-project.org/), which is a rewarding environment if you’re willing to put in the time to learn emacs and customise it to your needs. The history of ESS stretches back over 20 years (predating R!), but it’s still actively developed (...)" [wickham_r_2015, p. 19]
@@ -41,8 +43,6 @@ New to Emacs? Here are some resource that help get you starting
 - [Emacs tutorials and Courses](https://hackr.io/tutorials/learn-emacs)
 - [Hand drawn one pager for Emacs beginners by Sacha Chua](http://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/)
 - [How to learn Emacs](http://david.rothlis.net/emacs/howtolearn.html)
-
-![](https://d24ju8re1w4x9e.cloudfront.net/original/1X/16a2e29f6692dbc3c304e68faefb056b9c188f29.png)
 
 # Get the required add-ons
 
@@ -115,10 +115,31 @@ Since we want to push our changes to github we need an interface to git. This is
 
 After this type `C-x g` in any of your reproducible research documents to interact with git.
 
+![](../data/Magit_Buffer.png)
+
 ## Further conveniences
+
+### Project Management
 
 Of course you will write many papers. Hence, project management might be desirable. [projectile](http://projectile.readthedocs.io/en/latest/) might be what you are looking for. 
 
+In this environment searching for phrases, code snippets, etc. in any of the project related files is just one key-stroke away thanks to function `projectile-ag`
+
+![](../data/Projectile_ag.png)
+
+### File manager
+
+[Dired](https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html) is the directory editor of Emacs that let's you perform all file management related tasks within your project. 
+
+![](../data/Emacs_Dired.png)
+
+### Please add further tools
+
+# Use `rrtools` in Emacs. 
+
+This is a simple copy paste task. The following code chunks creates your research compendium. To run it, you can:
+
+- 
 
 
 # References 
