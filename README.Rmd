@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 The goal of EmacsEssay is to illustrate the use of the `rrtools` package in an emacs environment
 
-You can view the document here: dakni.github.io/EmacsEssay/docs/paper.html. Any comments/corrections/additions/etc. are welcome. You can find the document in the analysis/paper/paper.Rmd. Further information are in the "contribution" section below. 
+You can view the document [here](http://htmlpreview.github.io/?https://github.com/dakni/EmacsEssay/blob/master/analysis/paper/paper.html). Any comments/corrections/additions/etc. are welcome. You can find the document in the analysis/paper/paper.Rmd. Further information are in the "contribution" section below. 
 
 ### Citation
 

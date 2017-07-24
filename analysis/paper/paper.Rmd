@@ -5,7 +5,7 @@ author:
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
     bookdown::html_document2:
-    fig_caption: yes    
+    fig_caption: yes  
 bibliography: references.bib
 csl: journal-of-archaeological-science.csl
 abstract: |
