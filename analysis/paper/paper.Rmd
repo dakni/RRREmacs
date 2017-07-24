@@ -1,0 +1,124 @@
+---
+title: "Emacs, rrtools, and reproducible research"
+author:
+  - Daniel Knitter  
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+    bookdown::html_document2:
+    fig_caption: yes    
+bibliography: references.bib
+csl: journal-of-archaeological-science.csl
+abstract: |
+  RStudio's popularity is ever increasing and day by day all its conveniences seem to create a new way how to work with R. However, learning all these clicks and buttons might cause newcomers to learn the RStudio GUI and its quirks and not the necessary basics and workings of R. In this short introduction I want to present how to use the editor Emacs and some of its add-on packages as an alternative to RStudio.
+keywords: |
+  emacs; ess; reproducible research
+highlights: |
+  Showing how to do reproducible research using Emacs
+---
+
+
+<!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
+
+```{r, setup, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE,
+  comment = "#>",
+  fig.path = "figures"
+)
+```
+
+# Introduction
+
+Although RStudio is one of the most popular GUIs for R, offering a lot of convenient features, there are still many users using a different setup to work with R, develop their packages, write their papers, etc. 
+
+Here I want to show the ease of using Emacs and some of its add-on package as a all-in-one working environment solution for reproducible research using R. In order to use R within Emacs one has to install the ESS, i.e. emacs speaks statistics, add-on. But, is it worthwhile to use it instead of RStudio? Here is the answer of Hadley Wickham: "The only real competitor [to RStudio] is [ESS, emacs speaks statistics](http://ess.r-project.org/), which is a rewarding environment if you’re willing to put in the time to learn emacs and customise it to your needs. The history of ESS stretches back over 20 years (predating R!), but it’s still actively developed (...)" [wickham_r_2015, p. 19]
+
+New to Emacs? Here are some resource that help get you starting
+
+- [Emacs tutorials and Courses](https://hackr.io/tutorials/learn-emacs)
+- [Hand drawn one pager for Emacs beginners by Sacha Chua](http://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/)
+- [How to learn Emacs](http://david.rothlis.net/emacs/howtolearn.html)
+
+![](https://d24ju8re1w4x9e.cloudfront.net/original/1X/16a2e29f6692dbc3c304e68faefb056b9c188f29.png)
+
+# Get the required add-ons
+
+Emacs has its own packaging system so its is very easy to install and setup new packages. Put this is the init file of your Emacs (located under `$USER/.emacs.d/init.el`) in order to setup some package repositories. Subsequently we install [use-package](https://github.com/jwiegley/use-package) that simplifies the process of package installation and maintenance. 
+
+```
+;;; Set up package
+(require 'package)
+(setq package-archives
+      '(("melpa" . "https://melpa.org/packages/")
+        ("gnu" . "https://elpa.gnu.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")))
+(package-initialize)
+
+
+;;; Bootstrap use-package
+;; Install use-package if it's not already installed.
+;; use-package is used to configure the rest of the packages.
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+```
+
+## Emacs Speaks Statistics (ESS)
+
+Here is a simple ess setup. It takes care that your scripts follow the style guidelines of RStudio, adds a shortcut for [magrittr](https://cran.r-project.org/web/packages/magrittr/)'s pipe operator, and creates a function to simply insert chunks into a Rmd document.
+
+```
+(use-package ess
+  :ensure t ;; this will install ess from the add-on repositories in case it is not yet installed
+  :init (require 'ess-site) ;;--> This will set the associations for R-mode, julia-mode and Rnw-mode.
+  :config  
+  (add-hook 'ess-mode-hook
+            (lambda ()
+              (ess-set-style 'RStudio))) ;; amount of spaces of a tab; indentation levels;
+  (setq ess-eval-visibly 'nowait) ; don't hog Emacs
+  (setq ess-pdf-viewer-pref "evince") ; select software to open pdfs with
+
+  (defun my/add-pipe ()
+    "Adds a pipe operator %>% with one space to the left and then
+starts a newline with proper indentation"
+    (interactive)
+    (just-one-space 1)
+    (insert "%>%")
+    (ess-newline-and-indent))
+    (define-key ess-mode-map (kbd "M-p") #'my/add-pipe)
+
+    ;; https://emacs.stackexchange.com/questions/27405/insert-code-chunk-in-r-markdown-with-yasnippet-and-polymode
+    (defun tws-insert-r-chunk (header) 
+    "Insert an r-chunk in markdown mode. Necessary due to interactions between polymode and yas snippet" 
+    (interactive "sHeader: ") 
+    (insert (concat "```{r " header "}\n\n```")) 
+    (forward-line -1))
+)
+```
+
+## Magit
+
+Since we want to push our changes to github we need an interface to git. This is offered by [magit](https://magit.vc/) "A Git Porcelain inside Emacs". Here is a simple setup. Just paste it in your .init.el and use-package will take care of installing, etc.
+
+```
+(use-package magit
+  :ensure t
+  :bind ("C-x g" . magit-status)
+)
+```
+
+After this type `C-x g` in any of your reproducible research documents to interact with git.
+
+## Further add-ons
+
+Of course you will write many papers. Hence, project management might be desirable. [projectile](http://projectile.readthedocs.io/en/latest/) might be what you are looking for. 
+
+
+
+# References 
