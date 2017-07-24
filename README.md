@@ -2,19 +2,21 @@
 EmacsEssay
 ==========
 
-[![Travis-CI Build Status](https://travis-ci.org//.svg?branch=master)](https://travis-ci.org//)
+[![Travis-CI Build Status](https:/travis-ci.org/dakni/emacsessay/.svg?branch=master)](https:/travis-ci.org/dakni/emacsessay/)
 
-The goal of EmacsEssay is to ...
+The goal of EmacsEssay is to illustrate the use of the `rrtools` package in an emacs environment
+
+You can view the document here: dakni.github.io/EmacsEssay/docs/paper.html. Any comments/corrections/additions/etc. are welcome. You can find the document in the analysis/paper/paper.Rmd. Further information are in the "contribution" section below.
 
 ### Citation
 
-Please cite this compendium as:
+In case you wish to, please cite this compendium as:
 
-> Authors, (2017). *Title of compendium*. Accessed 24 Jul 2017. Online at <https://doi.org/xxx/xxx>
+> Knitter, Daniel, (2017). *Emacs, rrtools, and reproducible research*. Accessed 24 Jul 2017. Online at <https://github.com/dakni/EmacsEssay>
 
 ### Licenses
 
-**Text and figures:** [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
+**Text and figures:** [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/); If figures are created by other people these figures are linked to their source location.
 
 **Code:** See the [DESCRIPTION](DESCRIPTION) file
 

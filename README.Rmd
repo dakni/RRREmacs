@@ -16,13 +16,15 @@ knitr::opts_chunk$set(
 
 # EmacsEssay
 
-[![Travis-CI Build Status](https://travis-ci.org//.svg?branch=master)](https://travis-ci.org//)
+[![Travis-CI Build Status](https:/travis-ci.org/dakni/emacsessay/.svg?branch=master)](https:/travis-ci.org/dakni/emacsessay/)
 
-The goal of EmacsEssay is to illustrate the use of the rrtools package in an emacs environment
+The goal of EmacsEssay is to illustrate the use of the `rrtools` package in an emacs environment
+
+You can view the document here: dakni.github.io/EmacsEssay/docs/paper.html. Any comments/corrections/additions/etc. are welcome. You can find the document in the analysis/paper/paper.Rmd. Further information are in the "contribution" section below. 
 
 ### Citation
 
-Please cite this compendium as:
+In case you wish to, please cite this compendium as:
 
 > Knitter, Daniel, (`r format(Sys.Date(), "%Y")`). _Emacs, rrtools, and reproducible research_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at https://github.com/dakni/EmacsEssay
 
