@@ -4,7 +4,7 @@ FROM rocker/verse:3.4.1
 # required
 MAINTAINER Daniel Knitter <knitter@geographie.uni-kiel.de>
 
-COPY . /EmacsEssay
+COPY . /RRREmacs
 
 # go into the repo directory
 RUN . /etc/environment \
@@ -15,7 +15,7 @@ RUN . /etc/environment \
   && sudo apt-get install libudunits2-dev -y \
 
   # build this compendium package
-  && R -e "devtools::install('/EmacsEssay', dep=TRUE)" \
+  && R -e "devtools::install('/RRREmacs', dep=TRUE)" \
 
  # render the manuscript into a docx
-  && R -e "rmarkdown::render('/EmacsEssay/analysis/paper/paper.Rmd')"
+  && R -e "rmarkdown::render('/RRREmacs/analysis/paper/paper.Rmd')"
