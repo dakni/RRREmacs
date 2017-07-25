@@ -20,7 +20,7 @@ In case you wish to, please cite this compendium as:
 
 **Code:** See the [DESCRIPTION](DESCRIPTION) file
 
-\*\*<Data:**> [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse
+**Data:** [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse
 
 ### Contributions
 
