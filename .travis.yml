@@ -2,7 +2,7 @@
 
 env:
   global:
-  - REPO=dakni/RRREmacs
+  - REPO=dakni/rrremacs
 
 sudo: required
 
