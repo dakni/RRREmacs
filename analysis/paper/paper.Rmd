@@ -200,7 +200,6 @@ Afterwards you can send the `rrtools` and `devtools` commands appropriate for yo
 ```{r compendium, eval=FALSE}
 devtools::install_github("benmarwick/rrtools")
 rrtools::use_compendium("EmacsCompendium")
-rrtools::use_compendium("EmacsCompendium")
 devtools::use_github(".", auth_token = "xxxx", protocol = "ssh", private = FALSE)
 rrtools::use_analysis()
 rrtools::use_readme_rmd()
