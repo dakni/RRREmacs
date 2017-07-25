@@ -2,15 +2,25 @@
 RRREmacs
 ========
 
-[![Travis-CI Build Status](https://travis-ci.org//.svg?branch=master)](https://travis-ci.org//)
+[![Travis-CI Build Status](https://travis-ci.org/dakni/emacsessay.svg?branch=master)](https://travis-ci.org/dakni/emacsessay)
 
+<<<<<<< HEAD
 The goal of RRREmacs is to illustrate the use of the rrtools package in an emacs environment
+=======
+The goal of EmacsEssay is to illustrate the use of the `rrtools` package in an emacs environment
+
+You can view the document [here](http://htmlpreview.github.io/?https://github.com/dakni/EmacsEssay/blob/master/analysis/paper/paper.html). Any comments/corrections/additions/etc. are welcome. You can find the document in the analysis/paper/paper.Rmd. Further information are in the "contribution" section below.
+>>>>>>> 2393e9e6a7be908a4c731500a85eccf3a68b65e2
 
 ### Citation
 
-Please cite this compendium as:
+In case you wish to, please cite this compendium as:
 
+<<<<<<< HEAD
 > Knitter, Daniel, (2017). *Emacs, rrtools, and reproducible research*. Accessed 25 Jul 2017. Online at <https://github.com/dakni/RRREmacs>
+=======
+> Knitter, Daniel, (2017). *Emacs, rrtools, and reproducible research*. Accessed 24 Jul 2017. Online at <https://github.com/dakni/EmacsEssay>
+>>>>>>> 2393e9e6a7be908a4c731500a85eccf3a68b65e2
 
 ### Licenses
 
