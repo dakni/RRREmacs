@@ -1,4 +1,4 @@
-Package: EmacsEssay
+Package: RRREmacs
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
@@ -8,5 +8,5 @@ License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: bookdown
-URL: https://github.com/dakni/EmacsEssay
-BugReports: https://github.com/dakni/EmacsEssay/issues
+URL: https://github.com/dakni/RRREmacs
+BugReports: https://github.com/dakni/RRREmacs/issues

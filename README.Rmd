@@ -14,17 +14,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-# EmacsEssay
+# RRREmacs
 
 [![Travis-CI Build Status](https://travis-ci.org//.svg?branch=master)](https://travis-ci.org//)
 
-The goal of EmacsEssay is to illustrate the use of the rrtools package in an emacs environment
+The goal of RRREmacs is to illustrate the use of the rrtools package in an emacs environment
 
 ### Citation
 
 Please cite this compendium as:
 
-> Knitter, Daniel, (`r format(Sys.Date(), "%Y")`). _Emacs, rrtools, and reproducible research_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at https://github.com/dakni/EmacsEssay
+> Knitter, Daniel, (`r format(Sys.Date(), "%Y")`). _Emacs, rrtools, and reproducible research_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at https://github.com/dakni/RRREmacs
 
 ### Licenses
 
